@@ -15,7 +15,7 @@ use yii\web\AssetBundle;
 
 class AutoNumericAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/haifahrul/yii2-autonumeric/js';
+    public $sourcePath = '@vendor/haifahrul/yii2-autonumeric';
     public $js = [
         'js/autoNumeric-min.js'
     ];
