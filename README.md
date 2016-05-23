@@ -31,7 +31,7 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 The complete list of options are below
-There are multiple ways of changing the options. To format "123456789.00" to "€ 123.456.789,00" you could do the following:
+There are multiple ways of changing the options. To format "123456789.00" to "Rp 123.456.789,00" you could do the following:
 Pass options when initializing autoNumeric
 ```php
 <?= $form->field($model, 'price')->widget(\extead\autonumeric\AutoNumeric::classname(), [
