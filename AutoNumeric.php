@@ -72,12 +72,12 @@ class AutoNumeric extends InputWidget
         $pluginOptions = Json::encode($this->pluginOptions);
         $js = '
             var val = parseFloat({$idSave}.val());
-            {$id}.{$plugin}('init', {$pluginOptions});
-            {$id}.{$plugin}('set', val);
-            {$id}.on('change', function () {
-                var unformatted = {$id}.{$plugin}('get');
+            {$id}.{$plugin}("init", {$pluginOptions});
+            {$id}.{$plugin}("set", val);
+            {$id}.on("change", function () {
+                var unformatted = {$id}.{$plugin}("get");
                 {$idSave}.val(unformatted);
-                {$idSave}.trigger('change');
+                {$idSave}.trigger("change");
             });
         ';
         $view->registerJs($js);
