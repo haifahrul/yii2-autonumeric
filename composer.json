@@ -1,0 +1,21 @@
+{
+    "name": "haifahrul/yii2-autonumeric",
+    "description": "autoNumeric is a jQuery plugin that automatically formats currency and numbers as you type on form inputs.",
+    "type": "yii2-extension",
+    "keywords": ["yii2"," extension"," auto numeric"," formatter"," money"," widget"," money","currency"," bootstrap"," format"," mask"," unmask"," jQuery"," bootstrap 3"," number"," autonumeric"],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "fahrul",
+            "email": "haifahrul@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "haifahrul\\autonumeric\\": ""
+        }
+    }
+}
