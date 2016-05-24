@@ -24,6 +24,18 @@ or add
 
 to the require section of your `composer.json` file.
 
+Formatter Settings (optional)
+-----------------------------
+
+Default the thousandSeparator and decimalSeparator from Yii::$app->formatter, you can settings in your configuration file like below:
+
+'components' => [
+    'formatter' => [
+        'class' => 'yii\i18n\formatter',
+        'thousandSeparator' => ',',
+        'decimalSeparator' => '.',
+    ]
+]
 
 Usage
 -----
@@ -36,9 +48,10 @@ Pass options when initializing autoNumeric
 ```php
 <?= $form->field($model, 'price')->widget(\extead\autonumeric\AutoNumeric::classname(), [
         'pluginOptions' => [
-            aSep: ',',
+            aSep: ',', // default 
             aDec: '.',
             aSign: 'Rp. '
+            'mDec' => '0', // default 2
         ]
     ]);
 ?>
