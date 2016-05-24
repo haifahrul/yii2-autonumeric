@@ -33,8 +33,8 @@ Default the thousandSeparator and decimalSeparator from Yii::$app->formatter, yo
 'components' => [
     'formatter' => [
         'class' => 'yii\i18n\formatter',
-        'thousandSeparator' => ',',
-        'decimalSeparator' => '.',
+        'thousandSeparator' => '.',
+        'decimalSeparator' => ',',
     ]
 ]
 ```
@@ -45,12 +45,12 @@ Usage
 Once the extension is installed, simply use it in your code by:
 
 The complete list of options are below.
-There are multiple ways of changing the options. To format "123456789.00" to "Rp 123.456.789" you could do the following:
+There are multiple ways of changing the options. To format "123456789.00" to "Rp. 123.456.789" you could do the following:
 ```php
 <?= $form->field($model, 'price')->widget(\extead\autonumeric\AutoNumeric::classname(), [
         'pluginOptions' => [
-            'aSep' => ',', // if you using Formatter Settings, this is not necessary
-            'aDec' => '.', // if you using Formatter Settings, this is not necessary
+            'aSep' => '.', // if you using Formatter Settings, this is not necessary
+            'aDec' => ',', // if you using Formatter Settings, this is not necessary
             'aSign' => 'Rp. ',
             'mDec' => '0' // default 2
         ]
