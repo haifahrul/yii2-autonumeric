@@ -3,7 +3,6 @@ AutoNumericJs 1.9.43
 
 autoNumeric is a jQuery plugin that automatically formats currency and numbers as you type on form inputs.
 
-[![Build Status](https://travis-ci.org/haifahrul/yii2-autonumeric.svg?branch=master)](https://travis-ci.org/haifahrul/yii2-autonumeric)
 [![Total Downloads](https://poser.pugx.org/haifahrul/yii2-autonumeric/downloads)](https://packagist.org/packages/haifahrul/yii2-autonumeric)
 
 Installation
