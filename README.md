@@ -1,8 +1,9 @@
-AutoNumericJs
+AutoNumericJs 1.9.43
 =============
 
 autoNumeric is a jQuery plugin that automatically formats currency and numbers as you type on form inputs.
 
+[![Build Status](https://travis-ci.org/haifahrul/yii2-autonumeric.svg?branch=master)](https://travis-ci.org/haifahrul/yii2-autonumeric)
 [![Total Downloads](https://poser.pugx.org/haifahrul/yii2-autonumeric/downloads)](https://packagist.org/packages/haifahrul/yii2-autonumeric)
 
 Installation
@@ -28,7 +29,7 @@ Formatter Settings (optional)
 -----------------------------
 
 Default the thousandSeparator and decimalSeparator from Yii::$app->formatter, you can settings in your configuration file like below:
-
+``` php
 'components' => [
     'formatter' => [
         'class' => 'yii\i18n\formatter',
@@ -36,22 +37,22 @@ Default the thousandSeparator and decimalSeparator from Yii::$app->formatter, yo
         'decimalSeparator' => '.',
     ]
 ]
+```
 
 Usage
 -----
 
-Once the extension is installed, simply use it in your code by  :
+Once the extension is installed, simply use it in your code by:
 
-The complete list of options are below
-There are multiple ways of changing the options. To format "123456789.00" to "Rp 123.456.789,00" you could do the following:
-Pass options when initializing autoNumeric
+The complete list of options are below.
+There are multiple ways of changing the options. To format "123456789.00" to "Rp 123.456.789" you could do the following:
 ```php
 <?= $form->field($model, 'price')->widget(\extead\autonumeric\AutoNumeric::classname(), [
         'pluginOptions' => [
-            aSep: ',', // default 
-            aDec: '.',
-            aSign: 'Rp. '
-            'mDec' => '0', // default 2
+            'aSep' => ',', // if you using Formatter Settings, this is not necessary
+            'aDec' => '.', // if you using Formatter Settings, this is not necessary
+            'aSign' => 'Rp. ',
+            'mDec' => '0' // default 2
         ]
     ]);
 ?>
