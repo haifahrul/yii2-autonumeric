@@ -71,9 +71,10 @@ class AutoNumeric extends InputWidget
         $plugin = $this->_pluginName;
         $pluginOptions = Json::encode($this->pluginOptions);
         $js = <<< JS
-            var val = parseFloat({$idSave}.val());
             {$id}.{$plugin}('init', {$pluginOptions});
-            {$id}.{$plugin}('set', val);
+            if ({$idSave}.val() !== '') {
+                {$id}.{$plugin}('set', parseFloat({$idSave}.val()));
+            }
             {$id}.on('change', function () {
                  var unformatted = {$id}.{$plugin}('get');
                 {$idSave}.val(unformatted);
