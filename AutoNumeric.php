@@ -75,7 +75,7 @@ class AutoNumeric extends InputWidget
             if ({$idSave}.val() !== '') {
                 {$id}.{$plugin}('set', parseFloat({$idSave}.val()));
             }
-            {$id}.on('change', function () {
+            {$id}.on('keyup', function () {
                  var unformatted = {$id}.{$plugin}('get');
                 {$idSave}.val(unformatted);
                 {$idSave}.trigger('change');
