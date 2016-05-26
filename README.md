@@ -3,7 +3,6 @@ AutoNumericJs 1.9.43
 
 autoNumeric is a jQuery plugin that automatically formats currency and numbers as you type on form inputs.
 
-[![Build Status](https://travis-ci.org/haifahrul/yii2-autonumeric.svg?branch=master)](https://travis-ci.org/haifahrul/yii2-autonumeric)
 [![Total Downloads](https://poser.pugx.org/haifahrul/yii2-autonumeric/downloads)](https://packagist.org/packages/haifahrul/yii2-autonumeric)
 
 Installation
@@ -47,7 +46,11 @@ Once the extension is installed, simply use it in your code by:
 The complete list of options are below.
 There are multiple ways of changing the options. To format "123456789.00" to "Rp. 123.456.789" you could do the following:
 ```php
-<?= $form->field($model, 'price')->widget(\extead\autonumeric\AutoNumeric::classname(), [
+<?= $form->field($model, 'price')->widget(\haifahrul\autonumeric\AutoNumeric::classname(), [
+        'options' => [
+            'readonly' => true,
+            'disabled' => true
+        ],
         'pluginOptions' => [
             'aSep' => '.', // if you using Formatter Settings, this is not necessary
             'aDec' => ',', // if you using Formatter Settings, this is not necessary
