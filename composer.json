@@ -10,8 +10,10 @@
             "email": "haifahrul@gmail.com"
         }
     ],
+    "minimum-stability": "stable",
     "require": {
-        "yiisoft/yii2": "*"
+        "yiisoft/yii2": "*",
+        "bower-asset/autonumeric": "*"
     },
     "autoload": {
         "psr-4": {
