@@ -61,6 +61,8 @@ There are multiple ways of changing the options. To format "123456789.00" to "Rp
 ?>
 ```
 
+Other options you can see at http://www.yiiframework.com/doc-2.0/guide-helper-html.html
+
 An example and other plugin options, you can see autoNumeric docs: [https://github.com/BobKnothe/autoNumeric](https://github.com/BobKnothe/autoNumeric).
 
 Thanks to extead. https://github.com/extead
