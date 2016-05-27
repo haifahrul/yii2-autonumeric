@@ -10,7 +10,6 @@
             "email": "haifahrul@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
     "require": {
         "yiisoft/yii2": "*",
         "bower-asset/autonumeric": "*"
