@@ -47,9 +47,12 @@ The complete list of options are below.
 There are multiple ways of changing the options. To format "123456789.00" to "Rp. 123.456.789" you could do the following:
 ```php
 <?= $form->field($model, 'price')->widget(\haifahrul\autonumeric\AutoNumeric::classname(), [
+        'value' => $model->price,
         'options' => [
+            'id' => 'your-id',
+            'class' => 'your-class',
             'readonly' => true,
-            'disabled' => true
+            'disabled' => true,
         ],
         'pluginOptions' => [
             'aSep' => '.', // if you using Formatter Settings, this is not necessary

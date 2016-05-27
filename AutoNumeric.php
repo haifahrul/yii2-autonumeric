@@ -71,14 +71,36 @@ class AutoNumeric extends InputWidget
         $plugin = $this->_pluginName;
         $pluginOptions = Json::encode($this->pluginOptions);
         $js = <<< JS
-            {$id}.{$plugin}('init', {$pluginOptions});
-            if ({$idSave}.val() !== '') {
-                {$id}.{$plugin}('set', parseFloat({$idSave}.val()));
-            }
-            {$id}.on('keyup', function () {
-                 var unformatted = {$id}.{$plugin}('get');
-                {$idSave}.val(unformatted);
-                {$idSave}.trigger('change');
+            $(document).ready(function(){
+                {$id}.{$plugin}('init', {$pluginOptions});
+
+                if ({$idSave}.val() !== '') {
+                    {$id}.{$plugin}('set', parseFloat({$idSave}.val()));
+                } else {
+                    {$id}.{$plugin}('set', {$idSave}.val());
+                }
+
+                {$id}.on('keyup', function () {
+                    var value = {$id}.{$plugin}('get');
+                    {$idSave}.val(value);
+                    {$idSave}.trigger('change');
+                });
+            });
+
+            $(document).ajaxComplete(function(){
+                {$id}.{$plugin}('init', {$pluginOptions});
+
+                if ({$idSave}.val() !== '') {
+                    {$id}.{$plugin}('set', parseFloat({$idSave}.val()));
+                } else {
+                    {$id}.{$plugin}('set', {$idSave}.val());
+                }
+
+                {$id}.on('keyup', function () {
+                    var value = {$id}.{$plugin}('get');
+                    {$idSave}.val(value);
+                    {$idSave}.trigger('change');
+                });
             });
 JS;
         $view->registerJs($js);
