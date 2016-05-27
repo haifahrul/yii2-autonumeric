@@ -17,7 +17,6 @@ use yii\widgets\InputWidget;
 
 class AutoNumeric extends InputWidget
 {
-    public $options = [];
     public $pluginOptions = [];
     protected $_pluginName = 'autoNumeric';
     private $_inputOptions = [];
@@ -92,7 +91,7 @@ JS;
     {
         $name = $this->_inputOptions['id'];
         Html::addCssClass($this->_inputOptions, 'form-control');
-        $input = Html::textInput($name, $this->value, $this->_inputOptions, [$this->options]);
+        $input = Html::textInput($name, $this->value, $this->_inputOptions);
         $input .= $this->hasModel() ?
             Html::activeHiddenInput($this->model, $this->attribute, $this->options) :
             Html::hiddenInput($this->name, $this->value, $this->options);
