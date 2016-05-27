@@ -17,6 +17,6 @@ class AutoNumericAsset extends AssetBundle
 {
     public $sourcePath = '@vendor/bower/autoNumeric';
     public $js = [
-        'autoNumeric-min.js'
+        'autoNumeric.js'
     ];
 }
