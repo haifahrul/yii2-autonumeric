@@ -19,4 +19,7 @@ class AutoNumericAsset extends AssetBundle
     public $js = [
         'autoNumeric.js'
     ];
+    public $depends = [
+        'yii\web\YiiAsset'
+    ];
 }
